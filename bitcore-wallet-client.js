@@ -25251,8 +25251,8 @@ var $ = require('preconditions').singleton();
 var util = require('util');
 var async = require('async');
 var events = require('events');
-var Bitcore = require('bitcore-lib-sparks');
-var Mnemonic = require('bitcore-mnemonic-sparks');
+var Bitcore = require('@sparksevo/sparkscore-lib');
+var Mnemonic = require('@sparksevo/bitcore-mnemonic-sparks');
 var sjcl = require('sjcl');
 var url = require('url');
 var querystring = require('querystring');
@@ -27747,7 +27747,7 @@ API.prototype.createWalletFromOldCopay = function(username, password, blob, cb) 
 module.exports = API;
 
 }).call(this,require("buffer").Buffer)
-},{"../package.json":387,"./common":174,"./credentials":176,"./errors":177,"./log":180,"./paypro":181,"./verifier":182,"async":198,"bip38":203,"bitcore-lib-sparks":204,"bitcore-mnemonic-sparks":300,"buffer":47,"events":84,"json-stable-stringify":348,"lodash":353,"preconditions":361,"querystring":130,"sjcl":378,"superagent":379,"url":162,"util":167}],172:[function(require,module,exports){
+},{"../package.json":387,"./common":174,"./credentials":176,"./errors":177,"./log":180,"./paypro":181,"./verifier":182,"async":198,"bip38":203,"@sparksevo/sparkscore-lib":204,"@sparksevo/bitcore-mnemonic-sparks":300,"buffer":47,"events":84,"json-stable-stringify":348,"lodash":353,"preconditions":361,"querystring":130,"sjcl":378,"superagent":379,"url":162,"util":167}],172:[function(require,module,exports){
 'use strict';
 
 var Constants = {};
@@ -27827,7 +27827,7 @@ var $ = require('preconditions').singleton();
 var sjcl = require('sjcl');
 var Stringify = require('json-stable-stringify');
 
-var Bitcore = require('bitcore-lib-sparks');
+var Bitcore = require('@sparksevo/sparkscore-lib');
 var Address = Bitcore.Address;
 var PrivateKey = Bitcore.PrivateKey;
 var PublicKey = Bitcore.PublicKey;
@@ -28059,15 +28059,15 @@ Utils.buildTx = function(txp) {
 module.exports = Utils;
 
 }).call(this,require("buffer").Buffer)
-},{"./constants":172,"./defaults":173,"bitcore-lib-sparks":204,"buffer":47,"json-stable-stringify":348,"lodash":353,"preconditions":361,"sjcl":378}],176:[function(require,module,exports){
+},{"./constants":172,"./defaults":173,"@sparksevo/sparkscore-lib":204,"buffer":47,"json-stable-stringify":348,"lodash":353,"preconditions":361,"sjcl":378}],176:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
 var $ = require('preconditions').singleton();
 var _ = require('lodash');
 
-var Bitcore = require('bitcore-lib-sparks');
-var Mnemonic = require('bitcore-mnemonic-sparks');
+var Bitcore = require('@sparksevo/sparkscore-lib');
+var Mnemonic = require('@sparksevo/bitcore-mnemonic-sparks');
 var sjcl = require('sjcl');
 
 var Common = require('./common');
@@ -28533,7 +28533,7 @@ Credentials.fromOldCopayWallet = function(w) {
 module.exports = Credentials;
 
 }).call(this,require("buffer").Buffer)
-},{"./common":174,"bitcore-lib-sparks":204,"bitcore-mnemonic-sparks":300,"buffer":47,"lodash":353,"preconditions":361,"sjcl":378}],177:[function(require,module,exports){
+},{"./common":174,"@sparksevo/sparkscore-lib":204,"@sparksevo/bitcore-mnemonic-sparks":300,"buffer":47,"lodash":353,"preconditions":361,"sjcl":378}],177:[function(require,module,exports){
 'use strict';
 
 var _ = require('lodash');
@@ -28687,9 +28687,9 @@ client.Utils = require('./common/utils');
 client.sjcl = require('sjcl');
 
 // Expose bitcore
-client.Bitcore = require('bitcore-lib-sparks');
+client.Bitcore = require('@sparksevo/sparkscore-lib');
 
-},{"./api":171,"./common/utils":175,"./verifier":182,"bitcore-lib-sparks":204,"sjcl":378}],180:[function(require,module,exports){
+},{"./api":171,"./common/utils":175,"./verifier":182,"@sparksevo/sparkscore-lib":204,"sjcl":378}],180:[function(require,module,exports){
 var _ = require('lodash');
 
 var DEFAULT_LOG_LEVEL = 'silent';
@@ -28830,8 +28830,8 @@ module.exports = logger;
 (function (process,Buffer){
 var $ = require('preconditions').singleton();
 
-var Bitcore = require('bitcore-lib-sparks');
-var BitcorePayPro = require('bitcore-payment-protocol-sparks');
+var Bitcore = require('@sparksevo/sparkscore-lib');
+var BitcorePayPro = require('@sparksevo/bitcore-payment-protocol-sparks');
 var PayPro = {};
 
 PayPro._nodeRequest = function(opts, cb) {
@@ -29078,11 +29078,11 @@ PayPro.send = function(opts, cb) {
 module.exports = PayPro;
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"_process":120,"bitcore-lib-sparks":204,"bitcore-payment-protocol-sparks":311,"buffer":47,"http":156,"https":100,"preconditions":361}],182:[function(require,module,exports){
+},{"_process":120,"@sparksevo/sparkscore-lib":204,"@sparksevo/bitcore-payment-protocol-sparks":311,"buffer":47,"http":156,"https":100,"preconditions":361}],182:[function(require,module,exports){
 var $ = require('preconditions').singleton();
 var _ = require('lodash');
 
-var Bitcore = require('bitcore-lib-sparks');
+var Bitcore = require('@sparksevo/sparkscore-lib');
 
 var Common = require('./common');
 var Utils = Common.Utils;
@@ -29284,7 +29284,7 @@ Verifier.checkTxProposal = function(credentials, txp, opts) {
 
 module.exports = Verifier;
 
-},{"./common":174,"./log":180,"bitcore-lib-sparks":204,"lodash":353,"preconditions":361}],183:[function(require,module,exports){
+},{"./common":174,"./log":180,"@sparksevo/sparkscore-lib":204,"lodash":353,"preconditions":361}],183:[function(require,module,exports){
 arguments[4][2][0].apply(exports,arguments)
 },{"./asn1/api":184,"./asn1/base":186,"./asn1/constants":190,"./asn1/decoders":192,"./asn1/encoders":195,"bn.js":315,"dup":2}],184:[function(require,module,exports){
 var asn1 = require('../asn1');
@@ -34415,7 +34415,7 @@ module.exports={
         "spec": ">=1.2.0 <2.0.0",
         "type": "range"
       },
-      "F:\\_2017\\Github\\namespace\\sparkscoin\\bitcore-wallet-client-sparks\\node_modules\\bip38"
+      "F:\\_2017\\Github\\namespace\\sparkscoin\\@sparksevo/bitcore-wallet-client-sparks\\node_modules\\bip38"
     ]
   ],
   "_from": "bigi@>=1.2.0 <2.0.0",
@@ -34450,7 +34450,7 @@ module.exports={
   "_shasum": "9c665a95f88b8b08fc05cfd731f561859d725825",
   "_shrinkwrap": null,
   "_spec": "bigi@^1.2.0",
-  "_where": "F:\\_2017\\Github\\namespace\\sparkscoin\\bitcore-wallet-client-sparks\\node_modules\\bip38",
+  "_where": "F:\\_2017\\Github\\namespace\\sparkscoin\\@sparksevo/bitcore-wallet-client-sparks\\node_modules\\bip38",
   "bugs": {
     "url": "https://github.com/cryptocoinjs/bigi/issues"
   },
@@ -52882,13 +52882,13 @@ module.exports={
         "spec": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
         "type": "remote"
       },
-      "F:\\_2017\\Github\\namespace\\sparkscoin\\bitcore-wallet-client-sparks\\node_modules\\bitcore-lib-sparks"
+      "F:\\_2017\\Github\\namespace\\sparkscoin\\@sparksevo/bitcore-wallet-client-sparks\\node_modules\\@sparksevo/sparkscore-lib"
     ]
   ],
   "_from": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
   "_id": "elliptic@3.0.3",
   "_inCache": true,
-  "_location": "/bitcore-lib-sparks/elliptic",
+  "_location": "/@sparksevo/sparkscore-lib/elliptic",
   "_phantomChildren": {
     "inherits": "2.0.1"
   },
@@ -52902,13 +52902,13 @@ module.exports={
     "type": "remote"
   },
   "_requiredBy": [
-    "/bitcore-lib-sparks"
+    "/@sparksevo/sparkscore-lib"
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
   "_shasum": "865c9b420bfbe55006b9f969f97a0d2c44966595",
   "_shrinkwrap": null,
   "_spec": "elliptic@https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
-  "_where": "F:\\_2017\\Github\\namespace\\sparkscoin\\bitcore-wallet-client-sparks\\node_modules\\bitcore-lib-sparks",
+  "_where": "F:\\_2017\\Github\\namespace\\sparkscoin\\@sparksevo/bitcore-wallet-client-sparks\\node_modules\\@sparksevo/sparkscore-lib",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -72454,25 +72454,25 @@ module.exports={
   "_args": [
     [
       {
-        "raw": "bitcore-lib-sparks@^0.14.3",
+        "raw": "@sparksevo/sparkscore-lib@^0.14.3",
         "scope": null,
-        "escapedName": "bitcore-lib-sparks",
-        "name": "bitcore-lib-sparks",
+        "escapedName": "@sparksevo/sparkscore-lib",
+        "name": "@sparksevo/sparkscore-lib",
         "rawSpec": "^0.14.3",
         "spec": ">=0.14.3 <0.15.0",
         "type": "range"
       },
-      "F:\\_2017\\Github\\namespace\\sparkscoin\\bitcore-wallet-client-sparks"
+      "F:\\_2017\\Github\\namespace\\sparkscoin\\@sparksevo/bitcore-wallet-client-sparks"
     ]
   ],
-  "_from": "bitcore-lib-sparks@>=0.14.3 <0.15.0",
-  "_id": "bitcore-lib-sparks@0.14.3",
+  "_from": "@sparksevo/sparkscore-lib@>=0.14.3 <0.15.0",
+  "_id": "@sparksevo/sparkscore-lib@0.14.3",
   "_inCache": true,
-  "_location": "/bitcore-lib-sparks",
+  "_location": "/@sparksevo/sparkscore-lib",
   "_nodeVersion": "7.7.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/bitcore-lib-sparks-0.14.3.tgz_1502164167016_0.8122289911843836"
+    "tmp": "tmp/@sparksevo/sparkscore-lib-0.14.3.tgz_1502164167016_0.8122289911843836"
   },
   "_npmUser": {
     "name": "alex-werner",
@@ -72481,24 +72481,24 @@ module.exports={
   "_npmVersion": "4.1.2",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "bitcore-lib-sparks@^0.14.3",
+    "raw": "@sparksevo/sparkscore-lib@^0.14.3",
     "scope": null,
-    "escapedName": "bitcore-lib-sparks",
-    "name": "bitcore-lib-sparks",
+    "escapedName": "@sparksevo/sparkscore-lib",
+    "name": "@sparksevo/sparkscore-lib",
     "rawSpec": "^0.14.3",
     "spec": ">=0.14.3 <0.15.0",
     "type": "range"
   },
   "_requiredBy": [
     "/",
-    "/bitcore-mnemonic-sparks",
-    "/bitcore-payment-protocol-sparks",
-    "/bitcore-wallet-service-sparks"
+    "/@sparksevo/bitcore-mnemonic-sparks",
+    "/@sparksevo/bitcore-payment-protocol-sparks",
+    "/@sparksevo/bitcore-wallet-service-sparks"
   ],
-  "_resolved": "https://registry.npmjs.org/bitcore-lib-sparks/-/bitcore-lib-sparks-0.14.3.tgz",
+  "_resolved": "https://registry.npmjs.org/@sparksevo/sparkscore-lib/-/@sparksevo/sparkscore-lib-0.14.3.tgz",
   "_shasum": "a785f5e18f4634ee75d9c2b624c65e2bef45bd95",
   "_shrinkwrap": {
-    "name": "bitcore-lib-sparks",
+    "name": "@sparksevo/sparkscore-lib",
     "version": "0.14.3",
     "dependencies": {
       "bn.js": {
@@ -72555,8 +72555,8 @@ module.exports={
       }
     }
   },
-  "_spec": "bitcore-lib-sparks@^0.14.3",
-  "_where": "F:\\_2017\\Github\\namespace\\sparkscoin\\bitcore-wallet-client-sparks",
+  "_spec": "@sparksevo/sparkscore-lib@^0.14.3",
+  "_where": "F:\\_2017\\Github\\namespace\\sparkscoin\\@sparksevo/bitcore-wallet-client-sparks",
   "author": {
     "name": "BitPay",
     "email": "dev@bitpay.com"
@@ -72565,7 +72565,7 @@ module.exports={
     "request": "browser-request"
   },
   "bugs": {
-    "url": "https://github.com/sparkscoin/bitcore-lib-sparks/issues"
+    "url": "https://github.com/sparkscoin/@sparksevo/sparkscore-lib/issues"
   },
   "contributors": [
     {
@@ -72647,10 +72647,10 @@ module.exports={
   "directories": {},
   "dist": {
     "shasum": "a785f5e18f4634ee75d9c2b624c65e2bef45bd95",
-    "tarball": "https://registry.npmjs.org/bitcore-lib-sparks/-/bitcore-lib-sparks-0.14.3.tgz"
+    "tarball": "https://registry.npmjs.org/@sparksevo/sparkscore-lib/-/@sparksevo/sparkscore-lib-0.14.3.tgz"
   },
   "gitHead": "570209714dcea77dd306108166d0891ca8736283",
-  "homepage": "https://github.com/sparkscoin/bitcore-lib-sparks",
+  "homepage": "https://github.com/sparkscoin/@sparksevo/sparkscore-lib",
   "keywords": [
     "sparks",
     "transaction",
@@ -72679,12 +72679,12 @@ module.exports={
       "email": "ledniknoj@gmail.com"
     }
   ],
-  "name": "bitcore-lib-sparks",
+  "name": "@sparksevo/sparkscore-lib",
   "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sparkscoin/bitcore-lib-sparks.git"
+    "url": "git+https://github.com/sparkscoin/@sparksevo/sparkscore-lib.git"
   },
   "scripts": {
     "build": "gulp",
@@ -72716,13 +72716,13 @@ var spec = {
   }]
 };
 
-module.exports = require('bitcore-lib-sparks').errors.extend(spec);
+module.exports = require('@sparksevo/sparkscore-lib').errors.extend(spec);
 
-},{"bitcore-lib-sparks":204}],302:[function(require,module,exports){
+},{"@sparksevo/sparkscore-lib":204}],302:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var bitcore = require('bitcore-lib-sparks');
+var bitcore = require('@sparksevo/sparkscore-lib');
 var BN = bitcore.crypto.BN;
 var unorm = require('unorm');
 var _ = bitcore.deps._;
@@ -73019,7 +73019,7 @@ Mnemonic.bitcore = bitcore;
 module.exports = Mnemonic;
 
 }).call(this,require("buffer").Buffer)
-},{"./errors":301,"./pbkdf2":303,"./words":307,"bitcore-lib-sparks":204,"buffer":47,"unorm":386}],303:[function(require,module,exports){
+},{"./errors":301,"./pbkdf2":303,"./words":307,"@sparksevo/sparkscore-lib":204,"buffer":47,"unorm":386}],303:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -73371,7 +73371,7 @@ module.exports = PaymentProtocol;
 (function (Buffer){
 'use strict';
 
-var bitcore = require('bitcore-lib-sparks');
+var bitcore = require('@sparksevo/sparkscore-lib');
 var protobufjs = require('protobufjs/dist/protobuf');
 var RootCerts = require('./rootcerts');
 var rfc5280 = require('asn1.js/rfc/5280');
@@ -73865,7 +73865,7 @@ PaymentProtocol.trusted = RootCerts.trusted;
 module.exports = PaymentProtocol;
 
 }).call(this,require("buffer").Buffer)
-},{"./rootcerts":314,"asn1.js/rfc/5280":197,"bitcore-lib-sparks":204,"buffer":47,"protobufjs/dist/protobuf":366}],313:[function(require,module,exports){
+},{"./rootcerts":314,"asn1.js/rfc/5280":197,"@sparksevo/sparkscore-lib":204,"buffer":47,"protobufjs/dist/protobuf":366}],313:[function(require,module,exports){
 module.exports={
   "GlobalSign Root CA": "-----BEGIN CERTIFICATE-----\nMIIDdTCCAl2gAwIBAgILBAAAAAABFUtaw5QwDQYJKoZIhvcNAQEFBQAwVzELMAkGA1UEBhMC\nQkUxGTAXBgNVBAoTEEdsb2JhbFNpZ24gbnYtc2ExEDAOBgNVBAsTB1Jvb3QgQ0ExGzAZBgNV\nBAMTEkdsb2JhbFNpZ24gUm9vdCBDQTAeFw05ODA5MDExMjAwMDBaFw0yODAxMjgxMjAwMDBa\nMFcxCzAJBgNVBAYTAkJFMRkwFwYDVQQKExBHbG9iYWxTaWduIG52LXNhMRAwDgYDVQQLEwdS\nb290IENBMRswGQYDVQQDExJHbG9iYWxTaWduIFJvb3QgQ0EwggEiMA0GCSqGSIb3DQEBAQUA\nA4IBDwAwggEKAoIBAQDaDuaZjc6j40+Kfvvxi4Mla+pIH/EqsLmVEQS98GPR4mdmzxzdzxtI\nK+6NiY6arymAZavpxy0Sy6scTHAHoT0KMM0VjU/43dSMUBUc71DuxC73/OlS8pF94G3VNTCO\nXkNz8kHp1Wrjsok6Vjk4bwY8iGlbKk3Fp1S4bInMm/k8yuX9ifUSPJJ4ltbcdG6TRGHRjcdG\nsnUOhugZitVtbNV4FpWi6cgKOOvyJBNPc1STE4U6G7weNLWLBYy5d4ux2x8gkasJU26Qzns3\ndLlwR5EiUWMWea6xrkEmCMgZK9FGqkjWZCrXgzT/LCrBbBlDSgeF59N89iFo7+ryUp9/k5DP\nAgMBAAGjQjBAMA4GA1UdDwEB/wQEAwIBBjAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBRg\ne2YaRQ2XyolQL30EzTSo//z9SzANBgkqhkiG9w0BAQUFAAOCAQEA1nPnfE920I2/7LqivjTF\nKDK1fPxsnCwrvQmeU79rXqoRSLblCKOzyj1hTdNGCbM+w6DjY1Ub8rrvrTnhQ7k4o+YviiY7\n76BQVvnGCv04zcQLcFGUl5gE38NflNUVyRRBnMRddWQVDf9VMOyGj/8N7yy5Y0b2qvzfvGn9\nLhJIZJrglfCm7ymPAbEVtQwdpf5pLGkkeB6zpxxxYu7KyJesF12KwvhHhm4qxFYxldBniYUr\n+WymXUadDKqC5JlR3XC321Y9YeRq4VzW9v493kHMB65jUr9TU/Qr6cf9tveCX4XSQRjbgbME\nHMUfpIBvFSDJ3gyICh3WZlXi/EjJKSZp4A==\n-----END CERTIFICATE-----\n",
   "GlobalSign Root CA - R2": "-----BEGIN CERTIFICATE-----\nMIIDujCCAqKgAwIBAgILBAAAAAABD4Ym5g0wDQYJKoZIhvcNAQEFBQAwTDEgMB4GA1UECxMX\nR2xvYmFsU2lnbiBSb290IENBIC0gUjIxEzARBgNVBAoTCkdsb2JhbFNpZ24xEzARBgNVBAMT\nCkdsb2JhbFNpZ24wHhcNMDYxMjE1MDgwMDAwWhcNMjExMjE1MDgwMDAwWjBMMSAwHgYDVQQL\nExdHbG9iYWxTaWduIFJvb3QgQ0EgLSBSMjETMBEGA1UEChMKR2xvYmFsU2lnbjETMBEGA1UE\nAxMKR2xvYmFsU2lnbjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKbPJA6+Lm8o\nmUVCxKs+IVSbC9N/hHD6ErPLv4dfxn+G07IwXNb9rfF73OX4YJYJkhD10FPe+3t+c4isUoh7\nSqbKSaZeqKeMWhG8eoLrvozps6yWJQeXSpkqBy+0Hne/ig+1AnwblrjFuTosvNYSuetZfeLQ\nBoZfXklqtTleiDTsvHgMCJiEbKjNS7SgfQx5TfC4LcshytVsW33hoCmEofnTlEnLJGKRILzd\nC9XZzPnqJworc5HGnRusyMvo4KD0L5CLTfuwNhv2GXqF4G3yYROIXJ/gkwpRl4pazq+r1feq\nCapgvdzZX99yqWATXgAByUr6P6TqBwMhAo6CygPCm48CAwEAAaOBnDCBmTAOBgNVHQ8BAf8E\nBAMCAQYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUm+IHV2ccHsBqBt5ZtJot39wZhi4w\nNgYDVR0fBC8wLTAroCmgJ4YlaHR0cDovL2NybC5nbG9iYWxzaWduLm5ldC9yb290LXIyLmNy\nbDAfBgNVHSMEGDAWgBSb4gdXZxwewGoG3lm0mi3f3BmGLjANBgkqhkiG9w0BAQUFAAOCAQEA\nmYFThxxol4aR7OBKuEQLq4GsJ0/WwbgcQ3izDJr86iw8bmEbTUsp9Z8FHSbBuOmDAGJFtqkI\nk7mpM0sYmsL4h4hO291xNBrBVNpGP+DTKqttVCL1OmLNIG+6KYnX3ZHu01yiPqFbQfXf5WRD\nLenVOavSot+3i9DAgBkcRcAtjOj4LaR0VknFBbVPFd5uRHg5h6h+u/N5GJG79G+dwfCMNYxd\nAfvDbbnvRG15RjF+Cv6pgsH/76tuIMRQyV+dTZsXjAzlAcmgQWpzU/qlULRuJQ/7TBj0/VLZ\njmmx6BEP3ojY+x1J96relc8geMJgEtslQIxq/H5COEBkEveegeGTLg==\n-----END CERTIFICATE-----\n",
@@ -99454,8 +99454,8 @@ UChar.udata={
 
 },{}],387:[function(require,module,exports){
 module.exports={
-  "name": "bitcore-wallet-client-sparks",
-  "description": "Client for bitcore-wallet-service-sparks",
+  "name": "@sparksevo/bitcore-wallet-client-sparks",
+  "description": "Client for @sparksevo/bitcore-wallet-service-sparks",
   "author": "BitPay Inc",
   "version": "5.1.2",
   "license": "MIT",
@@ -99472,18 +99472,18 @@ module.exports={
   "engine": "node >= 0.12.0",
   "main": "index.js",
   "repository": {
-    "url": "git+ssh://git@github.com/sparkscoin/bitcore-wallet-client-sparks.git",
+    "url": "git+ssh://git@github.com/sparkscoin/@sparksevo/bitcore-wallet-client-sparks.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/sparkscoin/bitcore-wallet-client-sparks/issues"
+    "url": "https://github.com/sparkscoin/@sparksevo/bitcore-wallet-client-sparks/issues"
   },
   "dependencies": {
     "async": "^0.9.0",
     "bip38": "^1.3.0",
-    "bitcore-lib-sparks": "^0.14.3",
-    "bitcore-mnemonic-sparks": "^1.2.3",
-    "bitcore-payment-protocol-sparks": "github:sparkscoin/bitcore-payment-protocol-sparks#master_v1.2.2",
+    "@sparksevo/sparkscore-lib": "^0.14.3",
+    "@sparksevo/bitcore-mnemonic-sparks": "^1.2.3",
+    "@sparksevo/bitcore-payment-protocol-sparks": "github:sparkscoin/@sparksevo/bitcore-payment-protocol-sparks#master_v1.2.2",
     "json-stable-stringify": "^1.0.0",
     "lodash": "^3.3.1",
     "preconditions": "^1.0.8",
@@ -99491,7 +99491,7 @@ module.exports={
     "superagent": "^3.4.1"
   },
   "devDependencies": {
-    "bitcore-wallet-service-sparks": "^1.18.0",
+    "@sparksevo/bitcore-wallet-service-sparks": "^1.18.0",
     "browserify": "^13.1.0",
     "chai": "^1.9.1",
     "coveralls": "^2.11.2",
@@ -99517,7 +99517,7 @@ module.exports={
     "Ivan Socolsky <ivan@bitpay.com>",
     "Matias Alejo Garcia <ematiu@gmail.com>"
   ],
-  "homepage": "https://github.com/sparkscoin/bitcore-wallet-client-sparks#readme",
+  "homepage": "https://github.com/sparkscoin/@sparksevo/bitcore-wallet-client-sparks#readme",
   "directories": {
     "test": "test"
   }

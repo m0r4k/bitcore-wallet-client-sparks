@@ -1,10 +1,10 @@
 {
-  "name": "bitcore-wallet-client-sparks",
+  "name": "@sparksevo/bitcore-wallet-client-sparks",
   "main": "index.js",
   "version": "2.1.1",
-  "homepage": "https://github.com/sparkscoin/bitcore-wallet-client-sparks",
+  "homepage": "https://github.com/sparkscoin/@sparksevo/bitcore-wallet-client-sparks",
   "authors": ["BitPay Inc"],
-  "description": "Client for bitcore-wallet-service-sparks",
+  "description": "Client for @sparksevo/bitcore-wallet-service-sparks",
   "keywords": [
     "sparks",
     "copay-sparks",
