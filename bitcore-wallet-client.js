@@ -34415,7 +34415,7 @@ module.exports={
         "spec": ">=1.2.0 <2.0.0",
         "type": "range"
       },
-      "F:\\_2017\\Github\\namespace\\innovacoin\\bitcore-wallet-client-sparks\\node_modules\\bip38"
+      "F:\\_2017\\Github\\namespace\\sparkscoin\\bitcore-wallet-client-sparks\\node_modules\\bip38"
     ]
   ],
   "_from": "bigi@>=1.2.0 <2.0.0",
@@ -34450,7 +34450,7 @@ module.exports={
   "_shasum": "9c665a95f88b8b08fc05cfd731f561859d725825",
   "_shrinkwrap": null,
   "_spec": "bigi@^1.2.0",
-  "_where": "F:\\_2017\\Github\\namespace\\innovacoin\\bitcore-wallet-client-sparks\\node_modules\\bip38",
+  "_where": "F:\\_2017\\Github\\namespace\\sparkscoin\\bitcore-wallet-client-sparks\\node_modules\\bip38",
   "bugs": {
     "url": "https://github.com/cryptocoinjs/bigi/issues"
   },
@@ -38344,7 +38344,7 @@ GovObject.prototype.fromString = function(string) {
 };
 
 /**
- * Retrieve a hexa string that can be used with innovad's CLI interface
+ * Retrieve a hexa string that can be used with sparksd's CLI interface
  *
  * @param {Object} opts allows to skip certain tests. {@see Transaction#serialize}
  * @return {string}
@@ -38469,7 +38469,7 @@ Proposal.prototype.dataHex = function() {
         url: this.url
     };
 
-    // screwy data shims 'til we can fix this on innovad
+    // screwy data shims 'til we can fix this on sparksd
     var inner = ['proposal', _govObj];
     var outer = [ inner ];
 
@@ -52882,7 +52882,7 @@ module.exports={
         "spec": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
         "type": "remote"
       },
-      "F:\\_2017\\Github\\namespace\\innovacoin\\bitcore-wallet-client-sparks\\node_modules\\bitcore-lib-sparks"
+      "F:\\_2017\\Github\\namespace\\sparkscoin\\bitcore-wallet-client-sparks\\node_modules\\bitcore-lib-sparks"
     ]
   ],
   "_from": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
@@ -52908,7 +52908,7 @@ module.exports={
   "_shasum": "865c9b420bfbe55006b9f969f97a0d2c44966595",
   "_shrinkwrap": null,
   "_spec": "elliptic@https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
-  "_where": "F:\\_2017\\Github\\namespace\\innovacoin\\bitcore-wallet-client-sparks\\node_modules\\bitcore-lib-sparks",
+  "_where": "F:\\_2017\\Github\\namespace\\sparkscoin\\bitcore-wallet-client-sparks\\node_modules\\bitcore-lib-sparks",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -72462,7 +72462,7 @@ module.exports={
         "spec": ">=0.14.3 <0.15.0",
         "type": "range"
       },
-      "F:\\_2017\\Github\\namespace\\innovacoin\\bitcore-wallet-client-sparks"
+      "F:\\_2017\\Github\\namespace\\sparkscoin\\bitcore-wallet-client-sparks"
     ]
   ],
   "_from": "bitcore-lib-sparks@>=0.14.3 <0.15.0",
@@ -72556,7 +72556,7 @@ module.exports={
     }
   },
   "_spec": "bitcore-lib-sparks@^0.14.3",
-  "_where": "F:\\_2017\\Github\\namespace\\innovacoin\\bitcore-wallet-client-sparks",
+  "_where": "F:\\_2017\\Github\\namespace\\sparkscoin\\bitcore-wallet-client-sparks",
   "author": {
     "name": "BitPay",
     "email": "dev@bitpay.com"
@@ -72565,7 +72565,7 @@ module.exports={
     "request": "browser-request"
   },
   "bugs": {
-    "url": "https://github.com/innovacoin/bitcore-lib-sparks/issues"
+    "url": "https://github.com/sparkscoin/bitcore-lib-sparks/issues"
   },
   "contributors": [
     {
@@ -72637,7 +72637,7 @@ module.exports={
   },
   "description": "A pure and powerful JavaScript Innova library.",
   "devDependencies": {
-    "bitcore-build-sparks": "github:innovacoin/bitcore-build-sparks",
+    "bitcore-build-sparks": "github:sparkscoin/bitcore-build-sparks",
     "brfs": "^1.2.0",
     "browserify": "latest",
     "chai": "^1.10.0",
@@ -72650,7 +72650,7 @@ module.exports={
     "tarball": "https://registry.npmjs.org/bitcore-lib-sparks/-/bitcore-lib-sparks-0.14.3.tgz"
   },
   "gitHead": "570209714dcea77dd306108166d0891ca8736283",
-  "homepage": "https://github.com/innovacoin/bitcore-lib-sparks",
+  "homepage": "https://github.com/sparkscoin/bitcore-lib-sparks",
   "keywords": [
     "sparks",
     "transaction",
@@ -72684,7 +72684,7 @@ module.exports={
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/innovacoin/bitcore-lib-sparks.git"
+    "url": "git+https://github.com/sparkscoin/bitcore-lib-sparks.git"
   },
   "scripts": {
     "build": "gulp",
@@ -99472,18 +99472,18 @@ module.exports={
   "engine": "node >= 0.12.0",
   "main": "index.js",
   "repository": {
-    "url": "git+ssh://git@github.com/innovacoin/bitcore-wallet-client-sparks.git",
+    "url": "git+ssh://git@github.com/sparkscoin/bitcore-wallet-client-sparks.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/innovacoin/bitcore-wallet-client-sparks/issues"
+    "url": "https://github.com/sparkscoin/bitcore-wallet-client-sparks/issues"
   },
   "dependencies": {
     "async": "^0.9.0",
     "bip38": "^1.3.0",
     "bitcore-lib-sparks": "^0.14.3",
     "bitcore-mnemonic-sparks": "^1.2.3",
-    "bitcore-payment-protocol-sparks": "github:innovacoin/bitcore-payment-protocol-sparks#master_v1.2.2",
+    "bitcore-payment-protocol-sparks": "github:sparkscoin/bitcore-payment-protocol-sparks#master_v1.2.2",
     "json-stable-stringify": "^1.0.0",
     "lodash": "^3.3.1",
     "preconditions": "^1.0.8",
@@ -99517,7 +99517,7 @@ module.exports={
     "Ivan Socolsky <ivan@bitpay.com>",
     "Matias Alejo Garcia <ematiu@gmail.com>"
   ],
-  "homepage": "https://github.com/innovacoin/bitcore-wallet-client-sparks#readme",
+  "homepage": "https://github.com/sparkscoin/bitcore-wallet-client-sparks#readme",
   "directories": {
     "test": "test"
   }

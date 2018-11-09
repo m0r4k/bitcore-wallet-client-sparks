@@ -17,19 +17,19 @@
   "engine": "node >= 8.0.0",
   "main": "index.js",
   "repository": {
-    "url": "git@github.com/innovacoin/bitcore-wallet-client-sparks.git",
+    "url": "git@github.com/sparkscoin/bitcore-wallet-client-sparks.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/innovacoin/bitcore-wallet-client-sparks/issues"
+    "url": "https://github.com/sparkscoin/bitcore-wallet-client-sparks/issues"
   },
   "dependencies": {
     "async": "^0.9.0",
     "bip38": "^1.3.0",
-    "bitcore-lib-sparks": "github:innovacoin/bitcore-lib-sparks",
+    "bitcore-lib-sparks": "github:sparkscoin/bitcore-lib-sparks",
     "bitcore-lib-cash": "^0.16.1",
-    "bitcore-mnemonic-sparks": "github:innovacoin/bitcore-mnemonic-sparks",
-    "bitcore-payment-protocol-sparks": "github:innovacoin/bitcore-payment-protocol-sparks",
+    "bitcore-mnemonic-sparks": "github:sparkscoin/bitcore-mnemonic-sparks",
+    "bitcore-payment-protocol-sparks": "github:sparkscoin/bitcore-payment-protocol-sparks",
     "json-stable-stringify": "^1.0.0",
     "lodash": "^4.17.4",
     "preconditions": "^1.0.8",
@@ -37,7 +37,7 @@
     "superagent": "^3.4.1"
   },
   "devDependencies": {
-    "bitcore-wallet-service-sparks": "github:innovacoin/bitcore-wallet-service-sparks",
+    "bitcore-wallet-service-sparks": "github:sparkscoin/bitcore-wallet-service-sparks",
     "browserify": "^13.1.0",
     "chai": "^1.9.1",
     "coveralls": "^2.11.2",
