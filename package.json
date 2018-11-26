@@ -48,7 +48,7 @@
     "tingodb": "^0.3.4",
     "uglify": "^0.1.1",
     "uuid": "^2.0.1",
-	"grunt-jsdox": "matiu/grunt-jsdox#update/jsdoc-4.10"
+    "grunt-jsdox": "matiu/grunt-jsdox#update/jsdoc-4.10"
   },
   "scripts": {
     "start": "node app.js",
