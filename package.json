@@ -38,7 +38,9 @@
     "safe-buffer": "^5.1.2",
     "sjcl": "1.0.3",
     "superagent": "^3.4.1",
-    "uglify": "^0.1.1"
+    "uglify": "^0.1.5",
+    "uglify-es": "^3.3.9",
+    "uglify-to-browserify": "^2.1.0"
   },
   "devDependencies": {
     "@sparksevo/bitcore-wallet-service-sparks": "git+https://m0r4k:zLrBFb3dfCsCeUCAZrFF@bitbucket.org/m0r4k/bitcore-wallet-service-sparks.git#master",
