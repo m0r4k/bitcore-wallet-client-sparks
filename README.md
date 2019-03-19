@@ -1,38 +1,38 @@
 # Bitcore-Innova Wallet Client
 
-[![NPM Package](https://img.shields.io/npm/v/@sparksevo/bitcore-wallet-client-sparks.svg?style=flat-square)](https://www.npmjs.org/package/@sparksevo/bitcore-wallet-client-sparks)
-[![Build Status](https://img.shields.io/travis/sparkscoin/@sparksevo/bitcore-wallet-client-sparks.svg?branch=master&style=flat-square)](https://travis-ci.org/sparkscoin/@sparksevo/bitcore-wallet-client-sparks)
-[![Coverage Status](https://coveralls.io/repos/sparkscoin/@sparksevo/bitcore-wallet-client-sparks/badge.svg)](https://coveralls.io/r/sparkscoin/@sparksevo/bitcore-wallet-client-sparks)
+[![NPM Package](https://img.shields.io/npm/v/bitcore-wallet-client-sparks.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-wallet-client-sparks)
+[![Build Status](https://img.shields.io/travis/sparkspay/bitcore-wallet-client-sparks.svg?branch=master&style=flat-square)](https://travis-ci.org/sparkspay/bitcore-wallet-client-sparks)
+[![Coverage Status](https://coveralls.io/repos/sparkspay/bitcore-wallet-client-sparks/badge.svg)](https://coveralls.io/r/sparkspay/bitcore-wallet-client-sparks)
 
-The *official* client library for [@sparksevo/bitcore-wallet-service-sparks] (https://github.com/sparkscoin/@sparksevo/bitcore-wallet-service-sparks).
+The *official* client library for [bitcore-wallet-service-sparks] (https://github.com/sparkspay/bitcore-wallet-service-sparks).
 
 ## Description
 
-This package communicates with BWS [bitcore-sparks wallet service](https://github.com/sparkscoin/@sparksevo/bitcore-wallet-service-sparks) using the REST API. All REST endpoints are wrapped as simple async methods. All relevant responses from BWS are checked independently by the peers, thus the importance of using this library when talking to a third party BWS instance.
+This package communicates with BWS [bitcore-sparks wallet service](https://github.com/sparkspay/bitcore-wallet-service-sparks) using the REST API. All REST endpoints are wrapped as simple async methods. All relevant responses from BWS are checked independently by the peers, thus the importance of using this library when talking to a third party BWS instance.
 
-See [bitcore-wallet-sparks] (https://github.com/sparkscoin/bitcore-wallet-sparks) for a simple CLI wallet implementation that relays on BWS and uses @sparksevo/bitcore-wallet-client-sparks.
+See [bitcore-wallet-sparks] (https://github.com/sparkspay/bitcore-wallet-sparks) for a simple CLI wallet implementation that relays on BWS and uses bitcore-wallet-client-sparks.
 
 ## Get Started
 
-You can start using @sparksevo/bitcore-wallet-client-sparks in any of these two ways:
+You can start using bitcore-wallet-client-sparks in any of these two ways:
 
-* via [Bower](http://bower.io/): by running `bower install @sparksevo/bitcore-wallet-client-sparks` from your console
-* or via [NPM](https://www.npmjs.com/package/@sparksevo/bitcore-wallet-client-sparks): by running `npm install @sparksevo/bitcore-wallet-client-sparks` from your console.
+* via [Bower](http://bower.io/): by running `bower install bitcore-wallet-client-sparks` from your console
+* or via [NPM](https://www.npmjs.com/package/bitcore-wallet-client-sparks): by running `npm install bitcore-wallet-client-sparks` from your console.
 
 ## Example
 
-Start your own local [bitcore-sparks wallet service](https://github.com/sparkscoin/@sparksevo/bitcore-wallet-service-sparks) instance. In this example we assume you have `@sparksevo/bitcore-wallet-service-sparks` running on your `localhost:3232`.
+Start your own local [bitcore-sparks wallet service](https://github.com/sparkspay/bitcore-wallet-service-sparks) instance. In this example we assume you have `bitcore-wallet-service-sparks` running on your `localhost:3232`.
 
 Then create two files `irene.js` and `tomas.js` with the content below:
 
 **irene.js**
 
 ``` javascript
-var Client = require('@sparksevo/bitcore-wallet-client-sparks');
+var Client = require('bitcore-wallet-client-sparks');
 
 
 var fs = require('fs');
-var BWS_INSTANCE_URL = 'https://bws.dev.sparks.org/bws/api'
+var BWS_INSTANCE_URL = 'https://bws-dev.sparkspay.io/bws/api'
 
 var client = new Client({
   baseUrl: BWS_INSTANCE_URL,
@@ -54,11 +54,11 @@ client.createWallet("My Wallet", "Irene", 2, 2, {network: 'testnet'}, function(e
 
 ``` javascript
 
-var Client = require('@sparksevo/bitcore-wallet-client-sparks');
+var Client = require('bitcore-wallet-client-sparks');
 
 
 var fs = require('fs');
-var BWS_INSTANCE_URL = 'https://bws.dev.sparks.org/bws/api'
+var BWS_INSTANCE_URL = 'https://bws-dev.sparkspay.io/bws/api'
 
 var secret = process.argv[2];
 if (!secret) {
@@ -104,10 +104,10 @@ client.joinWallet(secret, "Tomas", {}, function(err, wallet) {
 });
 ```
 
-Install `@sparksevo/bitcore-wallet-client-sparks` before start:
+Install `bitcore-wallet-client-sparks` before start:
 
 ```
-npm i @sparksevo/bitcore-wallet-client-sparks
+npm i bitcore-wallet-client-sparks
 ```
 
 Create a new wallet with the first script:
@@ -785,7 +785,7 @@ Returns exchange rate for the specified currency & timestamp.
 
 **opts.ts**: `Date`, A timestamp to base the rate on (default Date.now()).
 
-**opts.provider**: `String`, A provider of exchange rates (default 'sparkscoin').
+**opts.provider**: `String`, A provider of exchange rates (default 'sparkspay').
 
 **Returns**: `Object`, rates - The exchange rate.
 
